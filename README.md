@@ -19,7 +19,7 @@ From: http://deanhume.com/home/blogpost/testing-service-workers-locally-with-sel
 - [anything jake archibald ever said](https://jakearchibald.com)
 - [sw api (mdn)](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 - [sw introduction (google)](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
-- [sw cookbook](https://serviceworke.rs/)
+- [sw cookbook [mozilla]](https://serviceworke.rs/)
 - [using sw (mdn)](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [sw-test (mdn)](https://github.com/mdn/sw-test)
 - [is service worker ready](https://jakearchibald.github.io/isserviceworker ready/)
