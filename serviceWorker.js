@@ -1,12 +1,15 @@
-const CACHE_NAME = 'slides-v1';
+const CACHE_NAME = 'slides-v2';
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async function aiife() {
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll([
-      '/nordicjs2017/',
-      '/nordicjs2017/index.html',
-      '/nordicjs2017/remark.min.js'
+      //'/nordicjs2017/',
+      //'/nordicjs2017/index.html',
+      '/nordicjs2017/remark.min.js',
+      'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz',
+      'https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic',
+      'https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic'
     ]);
     self.skipWaiting();
   }()));
@@ -26,19 +29,10 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.url.startsWith(self.location.origin)) {
-    event.respondWith((async function aiife() {
-      const cache = await caches.open(CACHE_NAME);
-      const response = await cache.match(event.request);
-      const fetchPromise = fetch(event.request)
-        .then((networkResponse) => {
-          if (networkResponse.ok) {
-            cache.put(event.request, networkResponse.clone());
-          }
-          return networkResponse;
-        });
+  event.respondWith((async function aiife() {
+    const cache = await caches.open(CACHE_NAME);
+    const response = await cache.match(event.request);
 
-      return response || fetchPromise;
-    }()));
-  }
+    return response || fetch(event.request);
+  }()));
 });
