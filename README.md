@@ -1,5 +1,7 @@
-# nordicjs2017
-quick talk about service workers
+# Service Workers - use them!
+Lightning talk @ Nordic.js 2017
+
+View slides: https://hontas.github.io/nordicjs2017/
 
 > There are only two hard things in Computer Science: cache invalidation and naming things.  
 > – Phil Karlton
