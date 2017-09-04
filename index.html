@@ -17,6 +17,15 @@
   <script src="remark.min.js"></script>
   <script>
     var slideshow = remark.create();
+      
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/nordicjs2017/serviceWorker.js', { scope: '/nordicjs2017/' })
+            .then((registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, (err) => {
+                console.log('ServiceWorker registration failed: ', err);
+           });
+    }
   </script>
 </body>
 </html>
