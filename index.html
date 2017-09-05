@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Service Workers - nordic.js 2017</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -21,30 +22,59 @@
 </head>
 <body>
    <textarea id="source">
-<!-- Slideshow Markdown -->
 
-class: center, middle
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+
+template: inverse
+
 background-image: url(bamse.skalman-lilleskutt.jpg)
-       
-# Title
+
+# Service Workers - use them
 
 ---
 
-# Agenda
+layout: false
 
-1. Introduction
-2. Deep-dive
-3. ...
+.left-column[
+  ## Whoami?
+  ## What is it?
+  ##
+]
+.right-column[
+  # Agenda
+]
 
 ---
 
-# Introduction
-<!-- Slideshow Markdown END -->
+what is it good for?
+  - improving user xprience
+    - especially on crappy networks
+
+Why is it so nice
+  - es6 vs sw browsersupport
+
+How to use it
+  - https and no private surfing!
+  - or localhost but a bit tricky with self signed
+  - be careful of all your apps running on the same local port
+
+demo - sw-test
+
+lifecycle
+  - register
+  - download
+  - install
+  - activate
+  - events
   </textarea>
   <script src="remark.min.js"></script>
   <script>
     var slideshow = remark.create();
-      
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/nordicjs2017/serviceWorker.js', { scope: '/nordicjs2017/' })
             .then((registration) => {
