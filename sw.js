@@ -9,7 +9,7 @@ const staticAssets = [
   '/nordicjs2017/media/bamse-med-honung.png',
   '/nordicjs2017/media/farmor.jpg',
   '/nordicjs2017/media/lille_skutt.jpg',
-  '/nordicjs2017/media/skalman.png',
+  '/nordicjs2017/media/skalman.jpg',
   '/nordicjs2017/media/avega.jpg',
   '/nordicjs2017/media/avega_group.png',
   '/nordicjs2017/media/sw-reg.png',
