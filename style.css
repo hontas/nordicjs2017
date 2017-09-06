@@ -229,6 +229,10 @@ code {
   width: 100%;
 }
 
+.vargen {
+    background-position-x: 27em;
+}
+
 .bg-bottom-3 {
   background-position-y: 250px;
 }
