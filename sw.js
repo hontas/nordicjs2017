@@ -6,7 +6,7 @@ const staticAssets = [
   '/nordicjs2017/media/pontus_gravatar.jpeg',
   '/nordicjs2017/media/js-logo-small.png',
   '/nordicjs2017/media/sw01.png',
-  '/nordicjs2017/media/bamse.png',
+  '/nordicjs2017/media/bamse-med-honung.png',
   '/nordicjs2017/media/farmor.jpg',
   '/nordicjs2017/media/lille_skutt.jpg',
   '/nordicjs2017/media/skalman.png',
