@@ -27,6 +27,10 @@ From: http://deanhume.com/home/blogpost/testing-service-workers-locally-with-sel
 - [is service worker ready](https://jakearchibald.github.io/isserviceworker ready/)
 - [sw-examples (chrome)](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker)
 
+## Related links
 - [pwa checklist](https://developers.google.com/web/progressive-web-apps/checklist)
 - [letsencrypt.org](https://letsencrypt.org/)
+
+## tools
+- [sw-toolbox (google)](https://github.com/GoogleChrome/sw-toolbox)
 - [lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
