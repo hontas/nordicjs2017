@@ -1,6 +1,6 @@
 
 
-const CACHE_NAME = 'nordicJS-v2';
+const CACHE_NAME = 'nordicJS-v3';
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async function aiife() {
@@ -24,8 +24,8 @@ self.addEventListener('install', (event) => {
       '/nordicjs2017/media/sw-install.jpg',
       '/nordicjs2017/media/sw-activate.jpg',
       '/nordicjs2017/media/sw-fetch.jpg',
-      'media/bamsemed honung.png',
-      'http://localhost:8000/media/Skalman%20i%20ka%CC%88rran.jpg',
+      '/nordicjs2017/media/bamsemed honung.png',
+      '/nordicjs2017/media/Skalman%20i%20ka%CC%88rran.jpg',
       'https://fonts.googleapis.com/css?family=Droid+Serif',
       'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz',
       'https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic',
