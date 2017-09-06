@@ -210,9 +210,8 @@ code {
 }
 
 .bamse img {
-  margin-top: -1em;
-  transform: translateX(5em);
-  width: 70%;
+  transform: translateX(7em);
+  width: 50%;
 }
 
 .farmor {
@@ -243,4 +242,6 @@ code {
 
 .avega-future {
   background-color: #021123;
+  background-position-y: -2em;
+  background-size: cover;
 }
