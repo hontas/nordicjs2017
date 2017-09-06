@@ -31,9 +31,12 @@ class: center, middle, inverse
 
 template: inverse
 
-background-image: url(bamse.skalman-lilleskutt.jpg)
-
 # Service Workers - use them
+
+???
+TL;DR
+
+take a selfie
 
 ---
 
@@ -41,48 +44,358 @@ layout: false
 
 .left-column[
   ## Whoami?
-  ## What is it?
-  ##
 ]
-.right-column[
-  # Agenda
-]
+.right-column[ .round[![Hontas](media/pontus_gravatar.jpeg)] ]
+???
+I'm Pontus :)
+--
+.right-column[ # [github.com/hontas](https://github.com/hontas) ]
+???
+slides + notes / links on github: nordicjs2017
+--
+.right-column[ # DEVELOPER .pull-left.js-logo[![JavaScript](media/js-logo-small.png)] ]
+--
+.right-column[ # ![Avega Group](media/avega_group.png) ]
+???
+currently @ comhem
+
+corporate logo
+---
+
+template: inverse
+class: avega-future
+background-image: url(media/avega.jpg)
+
+???
+
+Come talk to us - play our game - win awesome prices
+
+collect YOUR OWN pair programmer DUCK
 
 ---
 
-what is it good for?
-  - improving user xprience
-    - especially on crappy networks
+layout: false
+background-image: url(media/lille_skutt.jpg)
+class: lille-skutt
 
-Why is it so nice
-  - es6 vs sw browsersupport
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+]
 
-How to use it
-  - https and no private surfing!
-  - or localhost but a bit tricky with self signed
-  - be careful of all your apps running on the same local port
+???
+Quick show of hands:
 
-demo - sw-test
+1. Never heard of it
+2. Read about it, didn't try yet
+3. Tinkered at home
+4. Used it extensively
 
-lifecycle
-  - register
-  - download
-  - install
-  - activate
-  - events
+This talk will focus mainly on the first two groups
+
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+]
+.right-column[ # Service Worker Wat? ]
+???
+Think of a developer: this guy - worlds nicest bear.
+
+Thats genuinley how I feel about you
+
+Service Workers is actually what bamse drinks to get super-powers (?)
+
+So ahead of his time that cuddly bear
+--
+.right-column[ .max-width.bamse[![sw](media/bamsemed honung.png)] ]
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+]
+.right-column[
+  # Service Worker Wat?
+  .max-width.margin-top[![sw](media/sw01.png)]
+]
+
+???
+proxy between the web page and the internets
+
+1/things: intercept network requests
+
+mock responses
+
+apply networking strategies (cache first/network first/fallback to cache/network/stale while revalidate)
+
+cache API
+
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+]
+.right-column[
+  # Service Worker Wat?
+  .max-width.margin-top[![sw](media/Skalman i kärran.jpg)]
+]
+
+???
+– Phil Karlton
+
+your welcome.
+
+now you have that to care about ;)
+
+SW's - What are they good for?
+
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+  ## SW COOL!
+]
+.right-column[
+  # SW's are cool
+  - ## improved user experience
+]
+???
+anybody ever used their phone to surf the webs?
+
+especially for users on slow networks
+--
+.right-column[ - ## offline ]
+???
+handle offline - a part of the app - what should happen when the user opens it without any network?
+--
+.right-column[ - ## [demo](https://mdn.github.io/sw-test/) ]
+
+???
+DEMO
+1. unregister previous worker
+2. throttle network 2G
+3. reload
+4. turn off wifi
+5. reload again
+
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+  ## SW COOL!
+  ## SW REQ
+]
+.right-column[ # SW requirements ]
+--
+.right-column[ - ## HTTPS ]
+???
+served over HTTPS
+
+Because: Spidermans uncle - With great power...
+
+man-in-the-middle-attacks
+--
+.right-column[ - ## No private surfing ]
+--
+.right-column[ - ## localhost ]
+
+???
+localhost: and exeption HTTP is fine
+
+No self signed certificates
+
+how to start chrome with flag in the readme
+
+careful/aware on localhost - many apps running on the same port
+
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+  ## SW COOL!
+  ## SW REQ
+]
+.right-column[ # Browser support ]
+.right-column[ .max-width[![caniuse sw](media/caniuse-sw.png)] ]
+
+???
+49% in sweden
+---
+
+.left-column[
+  ## Whoami?
+  ## Whoareyou?
+  ## SW WAT?
+  ## SW COOL!
+  ## SW REQ
+]
+.right-column[ # Browser support ]
+.right-column[ .max-width[![caniuse async](media/caniuse-async.png)] ]
+
+???
+async await - hardly need to transpile
+
+the future is here!
+---
+class: inverse, sublime
+
+.left-column[
+  ## Register
+  ## Install
+  ## Activate
+  ## Fetch
+  ## ...
+]
+.right-column[
+  # SW lifecycle
+]
+
+---
+class: inverse, sublime
+background-image: url(media/sw-reg.png)
+
+.left-column[
+  ## Register
+]
+.right-column[
+  # SW lifecycle
+]
+
+???
+scope: what parts of the page it can control
+
+top most dir on the filesystem!
+
+after successful - download
+
+---
+class: inverse, sublime
+background-image: url(media/sw-install.png)
+
+.left-column[
+  ## Register
+  ## Install
+]
+.right-column[
+  # SW lifecycle
+]
+
+???
+cache static assets
+
+install is finished when...
+
+skipWaiting: forces the waiting service worker to become the active service worker
+
+otherwise remain in the waiting state
+
+browser recognises byte-difference in sw-file
+
+---
+class: inverse, sublime
+background-image: url(media/sw-activate.png)
+
+.left-column[
+  ## Register
+  ## Install
+  ## Activate
+]
+.right-column[
+  # SW lifecycle
+]
+
+???
+remove old caches
+
+Claim: allows an active service worker to set itself as the controller for all clients within its scope
+
+- instead of a reload
+
+finally it's on!
+
+---
+class: inverse, sublime, bg-bottom-3
+background-image: url(media/sw-fetch.png)
+
+.left-column[
+  ## Register
+  ## Install
+  ## Activate
+  ## Fetch
+]
+.right-column[
+  # SW lifecycle
+]
+
+???
+decide on networking strategy
+
+---
+class: inverse, sublime
+
+.left-column[
+  ## Register
+  ## Install
+  ## Activate
+  ## Fetch
+  ## Push
+  ## B-sync
+]
+.right-column[
+  # SW lifecycle
+]
+
+???
+decide on networking strategy
+
+so much moore - push, background sync
+
+go check out the repo - links n stuff
+
+---
+class: right, farmor
+background-image: url(media/farmor.jpg)
+
+# Thank you!
+
+## [github.com/hontas/nordicjs2017](https://github.com/hontas/nordicjs2017)
+
+???
+check out my slides and notes
+
+
+
   </textarea>
   <script src="remark.min.js"></script>
   <script>
-    var slideshow = remark.create();
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/nordicjs2017/serviceWorker.js', { scope: '/nordicjs2017/' })
-            .then((registration) => {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, (err) => {
-                console.log('ServiceWorker registration failed: ', err);
-           });
-    }
+    var slideshow = remark.create({
+      ratio: '16:9',
+      navigation:  {
+        scroll: false
+      }
+    });
+  </script>
+  <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then((reg) => {
+      console.log(`SW registered with scope: ${reg.scope}`);
+    }, (err) => {
+      console.log('SW registration failed: ', err);
+    });
+}
   </script>
 </body>
 </html>
