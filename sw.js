@@ -52,7 +52,6 @@ self.addEventListener('fetch', (event) => {
       .then((networkResponse) => {
         if (networkResponse.ok) {
           cache.put(event.request, networkResponse.clone());
-          console.log('updated resource for', event.request.url);
         }
         return networkResponse;
       });
