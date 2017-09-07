@@ -43,7 +43,7 @@ take a selfie
 layout: false
 
 .left-column[
-  ## Whoami?
+  ## whoami
 ]
 .right-column[ .round[![Hontas](media/pontus_gravatar.jpeg)] ]
 ???
@@ -74,34 +74,11 @@ collect YOUR OWN pair programmer DUCK
 
 ---
 
-layout: false
-background-image: url(media/lille_skutt.jpg)
-class: lille-skutt
-
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
-]
-
-???
-Quick show of hands:
-
-1. Never heard of it
-2. Read about it, didn't try yet
-3. Tinkered at home
-4. Used it extensively
-
-This talk will focus mainly on the first two groups
-
----
-
-.left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
 ]
 .right-column[
-  # Service Worker Wat?
   .max-width.bamse[![sw](media/bamse-med-honung.png)]
 ]
 ???
@@ -111,17 +88,15 @@ then service workers = thunder honey
 ---
 
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
 ]
 .right-column[
-  # Service Worker Wat?
   .max-width.margin-top[![sw](media/sw01.png)]
 ]
 
 ???
-proxy between the web page and the internets
+client side proxy controlled by javascript
 
 no DOM access
 
@@ -136,12 +111,10 @@ cache API
 ---
 
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
 ]
 .right-column[
-  # Service Worker Wat?
   .max-width.margin-top[![sw](media/skalman.jpg)]
 ]
 
@@ -157,13 +130,12 @@ SW's - What are they good for?
 ---
 
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
-  ## SW COOL!
+  ## SW GOOD!
 ]
 .right-column[
-  # SW's are cool
+  # SW's are good for you
   - ## improved user experience
 ]
 ???
@@ -175,7 +147,7 @@ especially for users on slow networks
 ???
 handle offline - a part of the app - what should happen when the user opens it without any network?
 --
-.right-column[ - ## [demo](https://mdn.github.io/sw-test/) ]
+.right-column[ - ## demo ]
 
 ???
 DEMO
@@ -191,17 +163,17 @@ class: vargen
 background-image: url(media/vargen.jpg)
 
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
-  ## SW COOL!
+  ## SW GOOD!
   ## SW REQ
 ]
 .right-column[
-  # SW requirements
+  # Requirements / support
   - ## HTTPS
   - ## HTTP on localhost
-  - ## No private surfing ]
+  - ## No private surfing
+]
 
 ???
 Because: Spidermans uncle - With great power...
@@ -217,13 +189,12 @@ careful/aware on localhost - many apps running on the same port
 ---
 
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
-  ## SW COOL!
+  ## SW GOOD!
   ## SW REQ
 ]
-.right-column[ # Browser support ]
+.right-column[ # Requirements / support ]
 .right-column[ .max-width[![caniuse sw](media/caniuse-sw.png)] ]
 
 ???
@@ -231,33 +202,18 @@ careful/aware on localhost - many apps running on the same port
 ---
 
 .left-column[
-  ## Whoami?
-  ## Whoareyou?
+  ## whoami
   ## SW WAT?
-  ## SW COOL!
+  ## SW GOOD!
   ## SW REQ
 ]
-.right-column[ # Browser support ]
+.right-column[ # Requirements / support ]
 .right-column[ .max-width[![caniuse async](media/caniuse-async.png)] ]
 
 ???
 async await - hardly need to transpile
 
 the future is here!
----
-class: inverse, sublime
-
-.left-column[
-  ## Register
-  ## Install
-  ## Activate
-  ## Fetch
-  ## ...
-]
-.right-column[
-  # SW lifecycle
-]
-
 ---
 class: inverse, sublime
 background-image: url(media/sw-reg.png)
@@ -362,7 +318,9 @@ check out my slides and notes
       ratio: '16:9',
       navigation:  {
         scroll: false
-      }
+      },
+      highlightLanguage: 'javascript',
+      highlightStyle: 'monokai'
     });
   </script>
   <script>
